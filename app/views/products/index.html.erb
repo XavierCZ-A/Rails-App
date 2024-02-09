@@ -1,0 +1,24 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <h1>Productos</h1>
+
+  <% @products.each do |product| %>
+    
+      <%= link_to product_path(product.id), class: 'product' do %>
+      <h3><%= product.title %></h3>
+      <p> <%= product.price %> </p>
+   
+    <% end %>
+  <% end %>
+
+
+
+
+</body>
+</html>
