@@ -1,0 +1,5 @@
+<%= link_to product_path(product.id), class: 'product' do %>
+    <%= image_tag product.image, width: 200 if product.image.attached? %>
+    <h3><%= product.title %></h3>
+    <p> <%= product.price %> </p>
+<% end %>

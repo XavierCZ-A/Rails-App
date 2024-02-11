@@ -6,19 +6,9 @@
     <title>Document</title>
 </head>
 <body>
-    <h1>Productos</h1>
-
-  <% @products.each do |product| %>
-    
-      <%= link_to product_path(product.id), class: 'product' do %>
-      <h3><%= product.title %></h3>
-      <p> <%= product.price %> </p>
-   
-    <% end %>
-  <% end %>
-
-
-
+  
+  <h1>Products</h1>
+  <%= render partial: 'product', collection: @products  %>
 
 </body>
 </html>

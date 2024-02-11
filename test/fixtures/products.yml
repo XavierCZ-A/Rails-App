@@ -4,9 +4,11 @@ laptop:
   title: Laptop Hp
   description: Procesador i7, 8GB RAM, 1TB HDD
   price: 1000
+  category: computers
 
-LaptopDell:
-  title: Laptop Dell
-  description: Procesador i7, 8GB RAM, 1TB HDD
+Iphone:
+  title: Iphone 11
+  description: 64GB, 4GB RAM, 12MP
   price: 2500
+  category: Phone
 
