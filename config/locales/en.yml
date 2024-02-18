@@ -28,4 +28,16 @@
 #       enabled: "ON"
 
 en:
-  hello: "Hello world"
+  activerecord:
+    attributes:
+      user:
+        email: "Email"
+        username: "Username"
+        password: "Password"
+    errors:
+      messages:
+        blank: "can't be blank"
+        taken: "has already been taken"
+        too_short: "is too short (minimum %{count} characters)"
+        invalid: "is invalid"
+        users: "User must exist"

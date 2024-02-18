@@ -1,10 +1,31 @@
 # Read about fixtures at https://api.rubyonrails.org/classes/ActiveRecord/FixtureSet.html
 
-Phone:
-  name: Phone
+mobile:
+  name: Celulares
 
 computers:
   name: Laptop
 
 Tablet:
   name: Tablet
+
+clothes:
+  name: Ropa
+
+cars:
+  name: Coches
+
+music:
+  name: Música
+
+electronic:
+  name: Electrónica
+
+books:
+  name: Libros
+
+sports:
+  name: Deportes
+
+videogames:
+  name: Videojuegos

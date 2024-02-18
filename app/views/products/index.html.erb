@@ -7,8 +7,30 @@
 </head>
 <body>
   
-  <h1>Products</h1>
-  <%= render partial: 'product', collection: @products  %>
+  <%= turbo_frame_tag 'home' do %>
+    <h1>Products</h1>
 
+    <%= form_with url: products_path, method: :get do |form| %>
+      <%= form.text_field :query_text, placeholder: 'Search', onChange: 'this.form.requestSubmit()', value: params[:query_text] %>
+      <%= form.number_field :max_price, placeholder: 'Max price', onChange: 'this.form.requestSubmit()', value: params[:max_price] %>
+
+      <%= form.number_field :min_price, placeholder: 'Min price', onChange: 'this.form.requestSubmit()', value: params[:min_price] %>
+
+      <%= form.select :order_by, options_for_select([['Recent', 'newest'], ['More expensive', 'expensive'], ['Cheaper', 'cheaper']], params[:order_by]), {}, { onChange: 'this.form.requestSubmit()' } %>
+
+    <% end %>
+
+    <%= link_to 'All', products_path %>
+
+    <%= render partial: 'category', collection: @category %>
+
+    <%= turbo_frame_tag "products-#{@pagy.page}" do %>
+      <%= render partial: 'product', collection: @products %>
+
+      <%= turbo_frame_tag "products-#{@pagy.next}", src: pagy_url_for(@pagy, @pagy.next), loading: :lazy if @pagy.next %>
+    <% end %>
+    
+
+  <% end %>
 </body>
 </html>

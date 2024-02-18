@@ -1,1 +1,13 @@
 es:
+  activerecord:
+    attributes:
+      user:
+        # email: "Correo electrónico"
+        # username: "Nombre de usuario"
+        # password: "Contraseña"
+    errors:
+      messages:
+        blank: "no puede estar en blanco"
+        taken: "ya está en uso"
+        too_short: "es demasiado corto (mínimo %{count} caracteres)"
+        invalid: "es inválido"

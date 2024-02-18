@@ -25,5 +25,8 @@ module MyappRails
     # config.eager_load_paths << Rails.root.join("extras")
     config.i18n.available_locales = [:en, :es]
     config.i18n.default_locale = :es
+    #Allow multi-query
+    config.active_record.async_query_executor = :global_thread_pool
+
   end
 end
